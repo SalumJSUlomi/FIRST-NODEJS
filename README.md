@@ -31,3 +31,17 @@ A common task for a web server can be to open a file on the server and return th
 3. When the file system has opened and read the file, the server returns the content to the client.
 4. Node.js eliminates the waiting, and simply continues with the next request.
 5. Node.js runs single-threaded,non-blocking, asynchronously programming, which is very memory efficient.
+
+## What Can Node.js Do?
+
+- Can generate dynamic page content.
+- Can create, open, read, write, delete and close files on the server.
+- Can collect form data.
+- Can add, delete, modify data in your database.
+
+## What is a Node.js Files?
+
+- Node.js files contains tasks that will be executed on certain events.
+- A typical event is someone trying to access a port on the server.
+- Node.js files must be initiated on the server before having any effect.
+- Node.js files have extension ".js".
