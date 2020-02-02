@@ -159,9 +159,15 @@ use the module "myfirstmodule" in a "firstnode.js" file, which is a Node.js file
 ```javascript
 var http = require('http');
 var time = require('./myfirstmodule');
-http.createServer((req, res) => {
-  res.writeHead(200, {'Content-Type': 'text/html'});
-  res.write`The date and time are currently: ${time.myDateTime()}`);
-  res.end();
-}).listen(8000);
+http
+  .createServer((req, res) => {
+    res.writeHead(200, { 'Content-Type': 'text/html' });
+    res.write(`The date and time are currently: ${time.myDateTime()}`);
+    res.end();
+  })
+  .listen(8000);
 ```
+
+#### **Notice that:** We use ./ to locate the module, that means that the module is located in the same folder as the Node.js file.
+
+#### Save the code above in a file called "firstnode.js", and initiate the file as usual. C:\Users\Your Name>node firstnode.js
