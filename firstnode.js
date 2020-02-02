@@ -1,9 +1,8 @@
 var http = require('http');
-var server = http.createServer((req, res) => {
-  res.writeHead(200, { 'Content-Type': 'text/plain' });
-  res.write('Hello Tanzania');
-  res.end();
-});
+var time = require('./myfirstmodule');
 
-//port
-server.listen(8000);
+http.createServer((req, res) => {
+  res.writeHead(200, { 'Content-Type': 'text/html' });
+  res.write(`The Date and Time are Currently: ${time.myDateTime()}`);
+  res.end();
+}).listen(8000);
