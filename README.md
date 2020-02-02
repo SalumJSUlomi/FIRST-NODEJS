@@ -120,3 +120,12 @@ var http = require('http');
 ```
 
 #### Now your application has access to the HTTP Module, and is able to create a server.
+
+```javascript
+http
+  .createServer((req, res) => {
+    res.writeHead(200, { 'Content-Type': 'text/html' });
+    res.end('Hello Tanzania');
+  })
+  .listen(8000);
+```
