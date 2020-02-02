@@ -208,3 +208,22 @@ http
 #### The function passed into the http.createServer() method, will be executed when someone tries to access the computer on port 8000.
 
 #### Save the code above in a file called "demo_http.js" and initiate the file.
+
+### Add an HTTP Header:
+
+#### If the response from the HTTP Server is supposed to be displayed as HTML, you should include an HTTP Header with correct content type.
+
+### Example
+
+```javascript
+var http = require('http');
+http
+  .createServer((req, res) => {
+    res.writeHead(200, { 'Content-Type': 'text/html' });
+    res.write('Hello Kilimanjaro');
+    res.end();
+  })
+  .listen(8000);
+```
+
+#### The first argument of the res.writeHead() method is a status code, 200 means that all is OK, the second argument is an object containing the response headers.
