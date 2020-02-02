@@ -71,4 +71,12 @@ http
   .listen(8000);
 ```
 
-#### Save the file on your computer: _C\Users\Your Name\firstnode.js_
+#### Save the file on your computer: _C\Users\Your Name\firstnode.js_. The code tells the browser to write "Hello Tanzania" if anyone(e.g a web browser) tries to access your computer on port 8000.
+
+## Command Line Interface:
+
+#### Node.js file must be initiated in the "Command Line Interface(CLI)" program of your computer.
+
+#### How to open the command line interface of your computer demands on the operating system. For Windows users, press the start button and look for "Command Prompt", or simply type "cmd" in the search field.
+
+#### Navigate to the folder that contains the file "firstnode.js" the command line interface window should look something like this: _C:\Users\Your Name>_
