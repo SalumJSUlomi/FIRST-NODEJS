@@ -94,3 +94,7 @@ http
 #### If anyone tries to access your computer on port 8000, they will get a "Hello Tanzania" message in return!
 
 #### Start your internet browser, and type in the address: http://localhost:8000
+
+#### Your Browser looks like that
+
+![alt text](img/localhost.png 'localhost:8000')
