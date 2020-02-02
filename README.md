@@ -5,9 +5,11 @@
 
 ### Example
 
+```javascript
 var http = require('http');
 http.createServer((req, res) => {
 res.writeHead(200, {'Content-Type': 'text/plain'}).listen(6000);
+```
 
 - Node.js is free
 - Node.js runs on various platforms (Windows, Linux, Unix, Mac OSX etc).
@@ -45,3 +47,26 @@ A common task for a web server can be to open a file on the server and return th
 - A typical event is someone trying to access a port on the server.
 - Node.js files must be initiated on the server before having any effect.
 - Node.js files have extension ".js".
+
+# Node.js Get Started
+
+1. **Download Node.js:**
+
+#### The official Node.js website has installation instructions for Node.js: <https://www.nodejs.org>
+
+2. **Getting Started:**
+
+#### Once you have downloaded and installed Node.js on your computer let's try to display "Hello Tanzania" in a web browser.
+
+#### Create a Node.js file named "firstnode.js" and add the following code:
+
+```javascript
+var http = require('http');
+// create server
+http
+  .createServer(function(req, res) {
+    res.writeHead(200, { 'Content-Type': 'text/html' });
+    res.end('Hello Tanzania');
+  })
+  .listen(8000);
+```
