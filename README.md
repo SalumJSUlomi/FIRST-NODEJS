@@ -172,4 +172,6 @@ http
 
 #### Save the code above in a file called "firstnode.js", and initiate the file as usual. C:\Users\Your Name>node firstnode.js
 
+#### After start your internet browser, and type in the address your browser looks like this
+
 ![alt text](img/own_module.png 'localhost:8000')
