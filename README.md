@@ -204,3 +204,7 @@ http
   })
   .listen(8000); // The server object listen on the port 8000
 ```
+
+#### The function passed into the http.createServer() method, will be executed when someone tries to access the computer on port 8000.
+
+#### Save the code above in a file called "demo_http.js" and initiate the file.
