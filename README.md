@@ -80,3 +80,17 @@ http
 #### How to open the command line interface of your computer demands on the operating system. For Windows users, press the start button and look for "Command Prompt", or simply type "cmd" in the search field.
 
 #### Navigate to the folder that contains the file "firstnode.js" the command line interface window should look something like this: _C:\Users\Your Name>_
+
+## Initiate the Node.js File:
+
+#### The file you have just created must be initiated by Node.js before any action can take place.
+
+#### Start your command line interface(cli), write node firstnode.js and hit enter.
+
+#### Initiate "firstnode.js": _C:\Users\Your Name>node firstnode.js_
+
+#### Now your computer works as a server!
+
+#### If anyone tries to access your computer on port 8000, they will get a "Hello Tanzania" message in return!
+
+#### Start your internet browser, and type in the address: http://localhost:8000
