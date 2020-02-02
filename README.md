@@ -171,3 +171,5 @@ http
 #### **Notice that:** We use ./ to locate the module, that means that the module is located in the same folder as the Node.js file.
 
 #### Save the code above in a file called "firstnode.js", and initiate the file as usual. C:\Users\Your Name>node firstnode.js
+
+![alt text](img/own_module.png 'localhost:8000')
