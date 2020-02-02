@@ -98,3 +98,25 @@ http
 #### Your Browser looks like that
 
 ![alt text](img/localhost.png 'localhost:8000')
+
+## Node.js Modules:
+
+### What is a Modules in Node.js?
+
+#### Consider modules to be the same as Javascript libraries.
+
+#### A set of functions you want to include in your application.
+
+### Built-in Modules:
+
+#### Node.js has a set of built-in modules which you can use without any further installation.
+
+### Include Modules:
+
+#### To include module use the require() function with the name of the module.
+
+```javascript
+var http = require('http');
+```
+
+#### Now your application has access to the HTTP Module, and is able to create a server.
