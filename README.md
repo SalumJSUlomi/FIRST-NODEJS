@@ -95,7 +95,7 @@ http
 
 #### Start your internet browser, and type in the address: http://localhost:8000
 
-#### Your Browser looks like that
+#### Your Browser looks like this
 
 ![alt text](img/localhost.png 'localhost:8000')
 
@@ -129,3 +129,21 @@ http
   })
   .listen(8000);
 ```
+
+### Create your Own Modules:
+
+#### You can create your own modules, and easily include them in your applications.
+
+### Example
+
+#### The following example creates a module that returns a date and time object.
+
+```javascript
+exports.myDateTime = function() {
+  return Date();
+};
+```
+
+#### Use the exports keyword to make properties and methods available outside the module file.
+
+#### Save the code above in a file called "myfirstmodule.js".
