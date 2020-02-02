@@ -147,3 +147,21 @@ exports.myDateTime = function() {
 #### Use the exports keyword to make properties and methods available outside the module file.
 
 #### Save the code above in a file called "myfirstmodule.js".
+
+### Include your Own Module
+
+#### Now you can include and use the module in any of your Node.js files.
+
+### Example
+
+use the module "myfirstmodule" in a "firstnode.js" file, which is a Node.js file.
+
+```javascript
+var http = require('http');
+var time = require('./myfirstmodule');
+http.createServer((req, res) => {
+  res.writeHead(200, {'Content-Type': 'text/html'});
+  res.write`The date and time are currently: ${time.myDateTime()}`);
+  res.end();
+}).listen(8000);
+```
