@@ -227,3 +227,36 @@ http
 ```
 
 The first argument of the res.writeHead() method is a status code, 200 means that all is OK, the second argument is an object containing the response headers.
+
+## Read the Query String
+
+The function passed into the http.createServer() has a req argument that represents the request from the client, as an object(http.IncomingMessage object).
+This object has a property called "url" which holds the part of the url that comes after the domain name.
+### Example
+Create the node.js file called demo_http>url.js and write the following codes
+```javascript
+var http = require('http');
+// create server object
+http.createServer((req, res) => {
+  res.writeHead(200, {'Content-Type': 'text/html'});
+  res.write(req.url);
+  res.end();
+}).listen(8000);
+```
+## Split the Query String
+There are built-in modules to easy split the query string into readable parts, such as the URL Module.
+### Example
+Split the query string into readable parts.
+```javascript
+var http = require('http');
+var url = require('url');
+http.createServer((req, res) => {
+  res.writeHead(200, {'Content-Type': 'text/html'});
+  var q = url.parse(req.url, true).query;
+  var txt = q.year + ' ' + q.month;
+  res.write(txt);
+  res.end();
+}).listen(8000);
+```
+The address:
+http://localhost:8000/?year=2020&month=February
