@@ -283,8 +283,8 @@ demo_html.html
 ```
 <html>
    <body>
-      <h1>Ngorongoro Creter</h1>
-      <p>That creter found in Tanzania is very good for tourist</p>
+      <h1>Ngorongoro Crater</h1>
+      <p>That crater found in Tanzania it is very good place for tourism</p>
    </body>
 </html> 
 ```
@@ -299,3 +299,12 @@ http.createServer((req, res) => {
     res.end();
   });
 }).listen(8000);
+```
+### Create Files
+The file system module has methods for creating new files.
+* fs.appendFile()
+* fs.Open()
+* fs.writeFile()
+
+The fs.appendFile() method appends specified content to a file.
+If the file does not exist, the file will be created.
