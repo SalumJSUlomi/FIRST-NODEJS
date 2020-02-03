@@ -308,3 +308,11 @@ The file system module has methods for creating new files.
 
 The fs.appendFile() method appends specified content to a file.
 If the file does not exist, the file will be created.
+### Example 
+Create a new file using the appendFile() method
+```javascript
+var fs = require('fs');
+fs.appendFile('mynewfile.txt', 'Hello Serengeti', function(err){
+  if(err) throw err;
+  console.log('Created');
+})
