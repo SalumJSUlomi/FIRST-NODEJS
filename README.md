@@ -262,3 +262,40 @@ Save the code above in a file called "demo_querystring.js" and initiate the file
 The address:
 http://localhost:8000/?year=2020&month=February
 Will produce the results 2020 February
+## Node.js File System Module:
+### Node.js as a File Server
+The Node.js file system module allows you to work with the file system on your computer.
+To include the File System Module, use the require() method.
+To include the File System Module, use the require() method.
+```javascript
+var fs = require('fs');
+```
+### Common Use for File System Module:
+* Read Files 
+* Create Files
+* Update Files
+* Delete Files
+* Rename Files
+### Read Files
+The fs.readFile() method is used to read files on your computer.
+Assume we have the following HTML file, located in the same folder as Node.js.
+demo_html.html
+```
+<html>
+   <body>
+      <h1>Ngorongoro Creter</h1>
+      <p>That creter found in Tanzania is very good for tourist</p>
+   </body>
+</html> 
+```
+Create a Node.js file that reads the HTML file, and return the content.
+```javascript
+var http = require('http');
+var fs = require('fs');
+http.createServer((req, res) => {
+  fs.readFile('demo_html.html', (err, data) => {
+    res.writeHead(200, {'Content-Type': 'text/html'});
+    res.write(data);
+    res.end();
+  });
+}).listen(8000);

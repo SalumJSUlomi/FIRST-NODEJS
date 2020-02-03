@@ -1,9 +1,9 @@
 var http = require('http');
-var url = require('url');
-http.createServer(function (req, res) {
-  res.writeHead(200, { 'Content-Type': 'text/html' });
-  var q = url.parse(req.url, true).query;
-  var text = q.year + ' ' + q.month;
-  res.write(text);
-  res.end();
+var fs = require('fs');
+http.createServer((req, res) => {
+  fs.readFile('demo_html.html', (err, data) => {
+    res.writeHead(200, { 'Content-Type': 'text/html' });
+    res.write(data);
+    res.end();
+  });
 }).listen(4000);
