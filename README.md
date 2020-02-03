@@ -258,5 +258,7 @@ http.createServer((req, res) => {
   res.end();
 }).listen(8000);
 ```
+Save the code above in a file called "demo_querystring.js" and initiate the file:
 The address:
 http://localhost:8000/?year=2020&month=February
+Will produce the results 2020 February
