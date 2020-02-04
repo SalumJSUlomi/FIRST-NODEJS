@@ -316,3 +316,24 @@ fs.appendFile('mynewfile.txt', 'Hello Serengeti', function(err){
   if(err) throw err;
   console.log('Created');
 })
+```
+The fs.open() method takes a "flag" as the second argument, if the flag is "w" for "writing" the specified file is open for writing. If the file does not exist an empty file is created.
+### Example
+Create a new empty file using the fs.open() method
+```javascript
+var fs = require('fs');
+fs.open('myfile.txt', 'w', (err, file)=> {
+   if(err) throw err;
+   console.log('Saved...')
+})
+``` 
+
+The fs.writeFile() method replaces the specified file and content if it exist. If the file does not exist, a new file, containing the specified content will be created.
+### Example
+Create a new file using the fs.writeFile() method.
+```javascript
+var fs = require('fs');
+fs.writeFile('mynewfile.txt', 'Hello Serengeti',(err) => {
+  if(err) throw err;
+  console.log('Saved....')
+})
