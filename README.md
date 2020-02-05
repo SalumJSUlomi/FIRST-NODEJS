@@ -417,3 +417,24 @@ Now we know how to parse string, and in the previous chapter we learned how to m
 Let us combine the two, and serve the file requested by the client.
 
 Create two html files and save them in the same folder as your Node.js files
+
+mount.html
+```
+<DOCTYPE html>
+<html>
+  <body>
+    <h1>Kilimanjaro</h1>
+    <p>I love Mount Kilimanjaro</p>
+  </body>
+</html>
+```
+crater.html
+```
+<DOCTYPE html>
+<html>
+  <body>
+    <h1>Ngorongoro</h1>
+    <p>I love to Visit Ngorongoro Crater</p>
+  </body>
+</html>
+```
