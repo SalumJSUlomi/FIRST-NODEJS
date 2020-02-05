@@ -405,9 +405,9 @@ Split a web address into readable parts.
 var url = require('url');
 var var addr = 'http://localhost:8000/default.html?year=2020&month=february';
 var q = url.parse(addr, true);
-console.log(q.host) // returns localhost:8000'
-console.log(q.pathname) // returns 'default.html'
-console.log(q.search) // returns '?year=2020&month=february';
+console.log(q.host); // returns localhost:8000'
+console.log(q.pathname); // returns 'default.html'
+console.log(q.search); // returns '?year=2020&month=february';
 var qdata = q.query; // returns an object {year:2020, month:'february'}
-console.log(qdata.month) // returns 'february'
+console.log(qdata.month); // returns 'february'
 ```
