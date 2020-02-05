@@ -438,3 +438,25 @@ crater.html
   </body>
 </html>
 ```
+Create a Node.js file that opens the requested file and returns the contents to the client. If anything goes wrong, throw a 404 error.
+
+demo_fileserver.js
+```javascript
+var http = require('http');
+var url = require('url');
+var fs = require('fs');
+// Create server object
+http.createServer((req, res) => {
+  var q = url.parse(req.url, true);
+  var filename = "." + q.pathname;
+  fs.readFile(filename, (err, data) => {
+    if(err) {
+      res.writeHead(404, {'Content-Type': 'text/html'});
+      return res.end("404 Not Found");
+    } else {
+       res.writeHead(200, {'Content-Type': 'text/html'});
+      return res.end();
+    }
+  });
+}).listen(8000);
+```
