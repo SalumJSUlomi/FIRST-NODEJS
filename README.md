@@ -389,3 +389,25 @@ fs.rename('mynewfile1.txt', 'myrenamedfile.txt', (err)=> {
   console.log('File Renamed...');
 });
 ```
+## Node.js URL Module
+### The Build-in URL Module
+The URL module splits up a web address into readable parts.
+
+To include the URL Module, use the require() method
+```javascript
+var url = require('url');
+```
+Parse an address with the url.parse()method, and it will return a URL object with each part of the address as properties.
+### Example
+
+Split a web address into readable parts.
+```javascript
+var url = require('url');
+var var addr = 'http://localhost:8000/default.html?year=2020&month=february';
+var q = url.parse(addr, true);
+console.log(q.host) // returns localhost:8000'
+console.log(q.pathname) // returns 'default.html'
+console.log(q.search) // returns '?year=2020&month=february';
+var qdata = q.query; // returns an object {year:2020, month:'february'}
+console.log(qdata.month) // returns 'february'
+```
