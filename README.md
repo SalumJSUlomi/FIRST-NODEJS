@@ -411,3 +411,9 @@ console.log(q.search); // returns '?year=2020&month=february';
 var qdata = q.query; // returns an object {year:2020, month:'february'}
 console.log(qdata.month); // returns 'february'
 ```
+### Node.js File Server
+Now we know how to parse string, and in the previous chapter we learned how to make Node.js behave as a file server.
+
+Let us combine the two, and serve the file requested by the client.
+
+Create two html files and save them in the same folder as your Node.js files
