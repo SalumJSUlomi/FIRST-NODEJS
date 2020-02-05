@@ -1,5 +1,5 @@
 var fs = require('fs');
-fs.writeFile('myfile.txt', 'Hello Tanzania', (err) => {
+fs.unlink('demo_html.html', (err) => {
   if (err) throw err;
-  console.log('Saved...');
-})
+  console.log('File Deleted...')
+});

@@ -315,7 +315,7 @@ var fs = require('fs');
 fs.appendFile('mynewfile.txt', 'Hello Serengeti', function(err){
   if(err) throw err;
   console.log('Created');
-})
+});
 ```
 The fs.open() method takes a "flag" as the second argument, if the flag is "w" for "writing" the specified file is open for writing. If the file does not exist an empty file is created.
 ### Example
@@ -325,7 +325,7 @@ var fs = require('fs');
 fs.open('myfile.txt', 'w', (err, file)=> {
    if(err) throw err;
    console.log('Saved...')
-})
+});
 ``` 
 
 The fs.writeFile() method replaces the specified file and content if it exist. If the file does not exist, a new file, containing the specified content will be created.
@@ -336,4 +336,45 @@ var fs = require('fs');
 fs.writeFile('mynewfile.txt', 'Hello Serengeti',(err) => {
   if(err) throw err;
   console.log('Saved....')
-})
+});
+```
+### Update Files
+The file system module has methods for updating files.
+* fs.appendFile()
+* fs.writeFile()
+
+The fs.appendFile() method appends the specified content at the end of the specified file.
+### Example
+Append "This is my country" to the end of the file "mynewfile.txt".
+```javascript
+var fs = require('fs');
+fs.appendFile('mynewfile.txt', 'This is my country', (err)=> {
+  if(err) throw err;
+  console.log('Updated...')
+});
+```
+The fs.writeFile() method replaces the specified file and content.
+### Example
+Replace the content of the file "myfile.txt".
+```javascript
+var fs = require('fs');
+fs.writeFile('myfile.txt', 'This is my country', (err) => {
+  if(err) throw err;
+  console.log('Updated...')
+});
+```
+### Delete Files
+To delete a file with the file system module, use the fs.unlink() method.
+
+The fs.unlink() method delete the specified file.
+### Example
+Delete "mynewfile.txt".
+```javascript
+var fs = require('fs');
+fs.unlink('mynewfile.txt', (err) => {
+  if(err) throw err;
+  console.log('File Deleted...');
+});
+```
+### Rename Files
+To rename a file with the file system module, use the fs.rename() method.
