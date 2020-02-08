@@ -540,5 +540,5 @@ In addition, all event properties and methods are an instance of an EventEmitter
 To be able to access these properties and methods, create an EventEmitter object.
 ```javascript
 var events = require('events');
-var eventEmitter = new EventEmitter();
+var eventEmitter = new events.EventEmitter();
 ```
