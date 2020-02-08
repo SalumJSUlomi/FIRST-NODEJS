@@ -515,4 +515,18 @@ http.createServer((req, res) => {
   res.end();
 }).listen(8000);
 ```
+## Node.js Events
+Node.js is perfect for event driven applications.
+### Event in Node.js
+Every action on a computer is an event. Like when a connection is made or a file is opened.
 
+Objects in Node.js can fire events. Like readStream object can fires events when opening or closing a file.
+
+### Example
+```javascript
+var fs = require('fs');
+var rs = fs.createReadStream('./demofile.txt');
+rs.on('open', function() {
+  console.log('The file is open');
+});
+```
