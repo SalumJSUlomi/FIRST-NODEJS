@@ -530,3 +530,15 @@ rs.on('open', function() {
   console.log('The file is open');
 });
 ```
+### Events Module
+Node.js has a build-in module called "events", where you can create-, fire- and listen- for your own events.
+
+To include the built-in events module use the require() method.
+
+In addition, all event properties and methods are an instance of an EventEmitter object.
+
+To be able to access these properties and methods, create an EventEmitter object.
+```javascript
+var events = require('events');
+var eventEmitter = new EventEmitter();
+```
