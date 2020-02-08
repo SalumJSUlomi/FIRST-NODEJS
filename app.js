@@ -1,8 +1,6 @@
-var http = require('http');
-var uc = require('upper-case');
+var fs = require('fs');
+var rs = fs.createReadStream('./demofile.txt');
 
-http.createServer((req, res) => {
-  res.writeHead(200, { 'Content-Type': 'text/html' });
-  res.write(uc.upperCase("Hello Tanzania"));
-  res.end();
-}).listen(8000);
+rs.on('open', () => {
+  console.log('The file is open');
+});
