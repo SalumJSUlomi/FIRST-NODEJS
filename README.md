@@ -587,7 +587,12 @@ http.createServer((req, res)=> {
   res.writeHead(200, {'Content-Type': 'text/html'});
   res.write('<form action = "fileupload" method = "post" enctype = "multipart/form-data">');
   res.write('<input type = "file" name = "filetoupload"><br>');
+  res.write('<input type = "submit">');
   res.write('</form>');
   return res.end();
 }).listen(8000);
 ```
+#### Step 2. Parse the Uploaded File
+Include the formidable module to be able to parse the uploaded file once is reaches the server.
+
+When the file is uploaded and parsed, it get placed on a temporary folder on your computer.
