@@ -560,3 +560,34 @@ var myEventHandler = function() {
 eventEmitter.on('scream', myEventHandler);
 // Fire the scream event
 eventEmitter.emit('scream');
+```
+
+## Node.js Upload Files
+### The Formidable Module
+There is a very good module for working with file uploads, called "Formidable".
+
+The formidable module can be downloaded and installed using NPM 
+```
+C:\Users\Your Name>npm install formidable
+```
+After you have downloaded the formidable module you can include module in any application.
+```javascript
+var formidable = require('formidable');
+```
+### Upload Files
+Now your ready to make a web page in Node.js that let's the user to upload files to your computer.
+#### Step 1. Create an Upload Form
+Create a Node.js file that writes an HTML form, with an upload field.
+### Example
+
+This code will produce an HTML form
+```javascript
+var http = require('http');
+http.createServer((req, res)=> {
+  res.writeHead(200, {'Content-Type': 'text/html'});
+  res.write('<form action = "fileupload" method = "post" enctype = "multipart/form-data">');
+  res.write('<input type = "file" name = "filetoupload"><br>');
+  res.write('</form>');
+  return res.end();
+}).listen(8000);
+```
