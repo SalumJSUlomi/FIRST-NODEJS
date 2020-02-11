@@ -1,4 +1,4 @@
-# Node.js Tutorial
+# Node.js Documentation
 
 - Node.js is an open source server enviroment.
 - Node.js allows you to run Javascript on the server
